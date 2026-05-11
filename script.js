@@ -45,3 +45,18 @@ function toggleMode() {
 }
 // Attatch the function to the button
 toggleBtn.addEventListener("click", toggleMode);
+
+//REVIEW
+// 1. Select the new element on the page (by id name)
+const hackerBtn = document.querySelector("#hacker");
+// 2. Attatch click event listener to the button
+hackerBtn.addEventListener("click", setHacker);
+// 3. Define the function that triggers when clicked
+function setHacker() {
+    console.log("setting hacker theme...");
+    body.style.background = "linear-gradient(to right, rgb(52, 232, 158), rgb(15, 52, 67))";
+    body.style.color = "rgb(255, 8, 0)";
+    heading.style.color = "rgb(255, 8, 0)";
+    body.style.fontFamily = "Papyrus";
+    description.textContent = "YOU HAVE BEEN HACKED!";
+}
