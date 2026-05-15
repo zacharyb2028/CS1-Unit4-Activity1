@@ -9,6 +9,7 @@ const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
 const image = document.querySelector("#image");
+const emoji = document.querySelector("#emoji");
 
 // Now we can change styles & attributes for those elements
 heading.style.color = "navy"; //JS wrote CSS code...
@@ -59,4 +60,18 @@ function setHacker() {
     heading.style.color = "rgb(255, 8, 0)";
     body.style.fontFamily = "Papyrus";
     description.textContent = "YOU HAVE BEEN HACKED!";
+}
+
+const sunsetBtn = document.querySelector("#sunset");
+sunsetBtn.addEventListener("click", setSunset);
+
+function setSunset() {
+    console.log("setting sunset theme");
+    body.style.background = "linear-gradient(110.6deg, rgb(255, 237, 50) 6.3%, rgb(255, 102, 114) 61.7%, rgb(145, 75, 143) 90.6%)";
+    body.style.color = "rgb(108, 19, 113)";
+    heading.style.color = "rgb(108, 19, 113)";
+    body.style.fontFamily = "Brush Script MT";
+    description.textContent = "It's Sunset Time";
+    image.src = "Sunset Dog.jpeg"
+    emoji.classList.add("animated");
 }
